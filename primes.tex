@@ -1,0 +1,26 @@
+\documentclass[margin=20pt]{standalone}
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.9\textwidth,
+height=0.5\textwidth,
+axis lines = left,
+no marks,
+xlabel={number of primes},
+ylabel={value},
+legend pos=outer north east,
+ymin=2.63,
+ymax=2.75,
+xmode=log,
+%log basis x={10}
+]
+\addplot[blue] table{edata.dat};
+%\addlegendentry {calculated values};
+%\addplot[mark=none, red, samples=2] {2.71828182845904523536028747135266249775724709369995};
+%\addlegendentry {e};
+\end{axis}
+\end{tikzpicture}
+\end{document}
